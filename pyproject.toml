@@ -10,7 +10,12 @@ oseti = "^0.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+taskipy = "^1.8.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+# Run local
+start = "python src/oseti_sample.py"
