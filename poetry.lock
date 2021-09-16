@@ -40,6 +40,17 @@ python-versions = "*"
 dev = ["pytest", "coverage", "coveralls"]
 
 [[package]]
+name = "httplib2"
+version = "0.19.1"
+description = "A comprehensive HTTP client library."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+pyparsing = ">=2.4.2,<3"
+
+[[package]]
 name = "importlib-metadata"
 version = "4.8.1"
 description = "Read metadata from Python packages"
@@ -91,6 +102,17 @@ description = "Japanese text normalizer for mecab-neologd"
 category = "main"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "oauth2"
+version = "1.9.0.post1"
+description = "library for OAuth version 1.9"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+httplib2 = "*"
 
 [[package]]
 name = "oseti"
@@ -153,7 +175,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 name = "pyparsing"
 version = "2.4.7"
 description = "Python parsing module"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
@@ -179,6 +201,17 @@ wcwidth = "*"
 [package.extras]
 checkqa-mypy = ["mypy (==v0.761)"]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
+
+[[package]]
+name = "python-dotenv"
+version = "0.19.0"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+cli = ["click (>=5.0)"]
 
 [[package]]
 name = "sengiri"
@@ -244,7 +277,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "75f7f5226e17d050c81603a2c6fd623f61fecaf3b52b18f1479423732d1a0a33"
+content-hash = "0294a42cea6192737184ff7a48a2ce7e27b5a83f4dc56a107dc6d17d90ac4a69"
 
 [metadata.files]
 atomicwrites = [
@@ -261,6 +294,10 @@ colorama = [
 ]
 emoji = [
     {file = "emoji-1.4.2.tar.gz", hash = "sha256:21257f311e24468031e85685867c00b87249dc7612b82dc763a771ba5fb00c01"},
+]
+httplib2 = [
+    {file = "httplib2-0.19.1-py3-none-any.whl", hash = "sha256:2ad195faf9faf079723f6714926e9a9061f694d07724b846658ce08d40f522b4"},
+    {file = "httplib2-0.19.1.tar.gz", hash = "sha256:0b12617eeca7433d4c396a100eaecfa4b08ee99aa881e6df6e257a7aad5d533d"},
 ]
 importlib-metadata = [
     {file = "importlib_metadata-4.8.1-py3-none-any.whl", hash = "sha256:b618b6d2d5ffa2f16add5697cf57a46c76a56229b0ed1c438322e4e95645bd15"},
@@ -303,6 +340,10 @@ neologdn = [
     {file = "neologdn-0.5.1-cp39-cp39-win32.whl", hash = "sha256:636c92852a0156a8746874996cbaf114d8816119962ede8f79cb9f634ba9b97f"},
     {file = "neologdn-0.5.1-cp39-cp39-win_amd64.whl", hash = "sha256:d17277c19901eb53f52ccdc8ec829b49441c314fde612d93528be78b64247e0d"},
     {file = "neologdn-0.5.1.tar.gz", hash = "sha256:206afe3e8de50bbe4a7f3209b8bca4ce8d3ea314467f6ca04a5c553acc8c32ba"},
+]
+oauth2 = [
+    {file = "oauth2-1.9.0.post1-py2.py3-none-any.whl", hash = "sha256:15b5c42301f46dd63113f1214b0d81a8b16254f65a86d3c32a1b52297f3266e6"},
+    {file = "oauth2-1.9.0.post1.tar.gz", hash = "sha256:c006a85e7c60107c7cc6da1b184b5c719f6dd7202098196dfa6e55df669b59bf"},
 ]
 oseti = [
     {file = "oseti-0.2.tar.gz", hash = "sha256:7b5a8f614a7deb93277f5153105c41d43ebffd57fff1aacec7c642c2f6fec068"},
@@ -356,6 +397,10 @@ pyparsing = [
 pytest = [
     {file = "pytest-5.4.3-py3-none-any.whl", hash = "sha256:5c0db86b698e8f170ba4582a492248919255fcd4c79b1ee64ace34301fb589a1"},
     {file = "pytest-5.4.3.tar.gz", hash = "sha256:7979331bfcba207414f5e1263b5a0f8f521d0f457318836a7355531ed1a4c7d8"},
+]
+python-dotenv = [
+    {file = "python-dotenv-0.19.0.tar.gz", hash = "sha256:f521bc2ac9a8e03c736f62911605c5d83970021e3fa95b37d769e2bbbe9b6172"},
+    {file = "python_dotenv-0.19.0-py2.py3-none-any.whl", hash = "sha256:aae25dc1ebe97c420f50b81fb0e5c949659af713f31fdb63c749ca68748f34b1"},
 ]
 sengiri = [
     {file = "sengiri-0.2.1.tar.gz", hash = "sha256:7d0ae55513dc7b7ed7a1cf42dbd7983c5bc900f0d9c9e39b3a8dfd65d178eeaa"},

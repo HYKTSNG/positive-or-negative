@@ -7,6 +7,8 @@ authors = ["Shin <example@example.com>"]
 [tool.poetry.dependencies]
 python = "^3.6"
 oseti = "^0.2"
+python-dotenv = "^0.19.0"
+oauth2 = "^1.9.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
@@ -18,4 +20,5 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
 # Run local
-start = "python src/oseti_sample.py"
+main = "python src/main.py"
+example = "python src/oseti_sample.py"
