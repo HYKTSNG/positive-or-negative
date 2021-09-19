@@ -24,8 +24,8 @@ def format_text(normal_text):
     normal_text = re.sub('\n', " ", normal_text)
     # 記号系削除
     normal_text = re.sub(
-        '[!"#$%&\'\\\\()*+,-./:;<=>?@[\\]^＾_`’～{|}~「」〔〕“”〈〉『』【】＆＊・（）＄＃＠。、？！｀＋￥％]',
-        "　", normal_text)
+        '[!"#$%&\'\\\\()*+,-./:;<=>?@[\\]^＾_`’～{|}~ '
+        '「」〔〕“”〈〉『』【】＆＊・（）＄＃＠。、？！｀＋￥％]', "　", normal_text)
     normal_text = re.sub("(ー)\\1", "　", normal_text)
     # 連続した文字の削除
     normal_text = re.sub("([ぁ-ん])\\1", "　", normal_text)
