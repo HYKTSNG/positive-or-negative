@@ -5,7 +5,7 @@ import oauth2 as oauth
 
 # --------------------------------------------------------------------
 def define_client_proc():
-    dotenv_path = '../.env'
+    dotenv_path = '.env'
     load_dotenv(dotenv_path)
     API_key = os.environ.get('API_key')
     API_secret_key = os.environ.get('API_secret_key')
@@ -16,4 +16,5 @@ def define_client_proc():
     access_token = oauth.Token(key=Access_token, secret=Access_secret_token)
     client = oauth.Client(consumer, access_token)
     #
+
     return client
