@@ -23,6 +23,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
 # Run local
-# poetry run main start
+# poetry run task {taskname}
 main = "python src/main.py"
 example = "python src/oseti_sample.py"
