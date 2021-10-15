@@ -9,3 +9,6 @@ def main():
 
 
 main()
+
+# 実行
+# poetry run task main
