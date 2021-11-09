@@ -1,11 +1,11 @@
 import get_tweet
-import pro_oseti
+import judge
 
 
 def main():
 
     get_tweet.get_tweet()
-    pro_oseti.judge()
+    judge.judge()
 
 
 main()
