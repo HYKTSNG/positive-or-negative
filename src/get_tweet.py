@@ -8,7 +8,7 @@ from define_client import define_client_proc
 def get_tweets_proc(client, screen_name):
     nnx = 3000
     url_base = 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name='
-    url = url_base + screen_name + "&count=" + str(nnx)
+    url = url_base + screen_name + "&count=" + str(nnx) + "&include_rts=False"
     array_aa = []
     response, data = client.request(url)
     if response.status == 200:
