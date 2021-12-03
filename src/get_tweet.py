@@ -27,9 +27,10 @@ def get_tweet():
     print("検索したい人のscreen_nameを@から入力してください")
     print("一度取得したことある人を見たいなら n と入力してください")
 
-    screen_name = str(input())
     # sample ↓
-    # screen_name = "@MpYcgEiS8peCbqq"
+    screen_name = "@MpYcgEiS8peCbqq"
+    ''' 本番時は↓ '''
+    # screen_name = str(input())
 
     if screen_name == "n":
         pass
@@ -57,7 +58,7 @@ def get_tweet():
             # print(dst)
 
             # print(unit_aa['text'])
-            test_dict[i] = unit_aa['text']
+            test_dict[dst] = unit_aa['text']
             i += 1
 
         # print("test_dict = ", test_dict)

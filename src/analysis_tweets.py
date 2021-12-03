@@ -46,7 +46,11 @@ def json_to_list():
     print(files_in, "\n")
     print("screen_nameを入力してください")
 
-    user_tweets = str(input()) + ".json"
+    # sample ↓
+    # screen_name = "@MpYcgEiS8peCbqq"
+    user_tweets = "@MpYcgEiS8peCbqq.json"
+    '''本番時は↓'''
+    # user_tweets = str(input()) + ".json"
 
     f = open(user_tweets, "r", encoding="utf-8")
 
