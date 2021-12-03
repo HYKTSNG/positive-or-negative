@@ -32,10 +32,14 @@ def format_text(normal_text):
     # アルファベット削除
     normal_text = re.sub("([A-Za-z0-9ａ-ｚＡ-Ｚ０-９])", "　", normal_text)
     # normal_text = re.sub("([_:])", "", normal_text)
+
+    # 全角スペースの削除
+    normal_text = re.sub("　", " ", normal_text)
+
     return normal_text
 
 
-def json_to_list():
+def json_to_dict():
 
     files = os.listdir()
     # print(files)
@@ -68,4 +72,4 @@ def json_to_list():
 
 
 if __name__ == '__main__':
-    json_to_list()
+    json_to_dict()
