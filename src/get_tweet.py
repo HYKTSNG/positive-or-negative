@@ -1,6 +1,7 @@
 import sys
 import json
 from define_client import define_client_proc
+from datetime import datetime
 
 
 # --------------------------------------------------------------------
@@ -46,6 +47,15 @@ def get_tweet():
         i = 0
         for unit_aa in array_aa:
             # print(unit_aa['created_at'])
+
+            #  日本時間に直す
+            tweet = {'create_at': unit_aa['created_at']}
+            dt = datetime.strptime(tweet['create_at'],
+                                   '%a %b %d %H:%M:%S %z %Y')
+            dt = dt.astimezone()
+            dst = datetime.strftime(dt, '%Y-%m-%d %H:%M:%S')
+            # print(dst)
+
             # print(unit_aa['text'])
             test_dict[i] = unit_aa['text']
             i += 1
