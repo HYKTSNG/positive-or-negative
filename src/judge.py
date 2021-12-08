@@ -5,7 +5,7 @@ import analysis_tweets
 def judge():
     analyzer = oseti.Analyzer()
 
-    tweets = analysis_tweets.json_to_list()
+    tweets = analysis_tweets.json_to_dict()
     # print(analysis_tweets.json_to_list())
 
     positive_or_negative = 0
