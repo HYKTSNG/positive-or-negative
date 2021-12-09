@@ -10,6 +10,8 @@ def judge():
     tweets = analysis_json.analysis_json()
     positive_or_negative = 0
 
+    print("\n-----------------------------\n")
+
     for t in tweets:
         print(t)
         print(analyzer.analyze_detail(t))
@@ -23,6 +25,8 @@ def judge():
         print("negative")
     else:
         print("neutral")
+
+    print("\n-----------------------------")
 
 
 if __name__ == '__main__':

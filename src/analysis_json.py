@@ -20,7 +20,7 @@ def analysis_json():
     print("screen_nameを入力してください")
     # screen_name = str(input())
     screen_name = "@MpYcgEiS8peCbqq"
-    print("screen_nameは、", screen_name, " ですね")
+    print("screen_nameは、", screen_name, " ですね\n")
     print("期間指定はしますか？")
     print("y/n でお願いします。")
     # y_or_n = str(input())
