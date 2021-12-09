@@ -1,3 +1,5 @@
+'''特定のアカウントのtweetを取ってくるファイル'''
+
 import sys
 import json
 from define_client import define_client_proc
