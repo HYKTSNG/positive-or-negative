@@ -44,16 +44,14 @@ def json_to_dict():
     for a in range(len(clear_text_list)):
         time_and_text_dict[time_list[a]].append(clear_text_list[a])
 
-    print("-----------------------------")
-
     # print(type(time_and_text_dict))
     # print(time_and_text_dict)
 
-    print("以下が取得した期間です")
-    for tatd in time_and_text_dict:
-        print(tatd)
+    print("\n以下が取得した期間です")
+    print("\n-----------------------------")
 
-    print("-----------------------------")
+    for i, tatd in enumerate(time_and_text_dict):
+        print(i, ":", tatd)
 
     for tatd in time_and_text_dict:
         # print(time_and_text_dict[tatd])
