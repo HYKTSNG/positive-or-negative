@@ -43,7 +43,7 @@ def get_tweet():
         array_aa = get_tweets_proc(client, screen_name)
 
         # sys.stderr.write("len(array_aa) = %d\n" % len(array_aa))
-        print("user_id", screen_name)
+        print("user_id : ", screen_name)
 
         # json出力
         test_dict: dict = {}
@@ -58,6 +58,8 @@ def get_tweet():
             dt = dt.astimezone()
             dst = datetime.strftime(dt, '%Y-%m-%d %H:%M:%S')
             # print(dst)
+
+            # tweetのID取得----------
 
             # print(unit_aa['text'])
             test_dict[dst] = unit_aa['text']

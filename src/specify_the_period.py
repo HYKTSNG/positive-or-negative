@@ -50,12 +50,17 @@ def json_to_dict():
     print("\n以下が取得した期間です")
     print("\n-----------------------------")
 
-    for i, tatd in enumerate(time_and_text_dict):
-        print(i, ":", tatd)
+    for tatd in time_and_text_dict:
+        # print(tatd)
+        pass
 
     for tatd in time_and_text_dict:
         # print(time_and_text_dict[tatd])
         pass
+
+    # print(time_and_text_dict)
+    with open("@MpYcgEiS8peCbqq.json", 'w', encoding="utf-8") as f:
+        json.dump(time_and_text_dict, f, indent=2, ensure_ascii=False)
 
     return time_and_text_dict
 
