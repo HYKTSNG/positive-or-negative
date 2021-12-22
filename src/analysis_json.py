@@ -33,7 +33,6 @@ def analysis_json():
 
     # 期間指定がある場合
     elif y_or_n == "y":
-        # ---期間指定できるようにする---
         time_and_text_dict = specify_the_period.json_to_dict()
         return time_and_text_dict
 

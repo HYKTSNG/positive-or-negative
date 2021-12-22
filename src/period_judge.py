@@ -1,9 +1,15 @@
+'''
+期間指定があった時のtweetのポジネガ判定
+
+まだ何もしてない。
+
+'''
+
 import oseti
 import analysis_json
 
 
-def judge():
-    '''tweetのポジネガ判定'''
+def period_judge():
 
     analyzer = oseti.Analyzer()
     tweets = analysis_json.analysis_json()
@@ -11,8 +17,9 @@ def judge():
 
     print("\n-----------------------------\n")
 
-    for t in tweets:
-        print(t)
+    for i, t in enumerate(tweets):
+        print(i, ":", t)
+        # print(analyzer.analyze_detail(t))
         positive_or_negative += sum(analyzer.analyze(t))
 
     print("\n", positive_or_negative)
@@ -28,4 +35,4 @@ def judge():
 
 
 if __name__ == '__main__':
-    judge()
+    period_judge()
