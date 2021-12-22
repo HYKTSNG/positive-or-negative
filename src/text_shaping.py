@@ -1,7 +1,3 @@
-'''
-textを使いやすいようにする。
-'''
-
 import re
 import MeCab
 
@@ -9,7 +5,9 @@ tagger = MeCab.Tagger()
 
 
 def format_text(normal_text):
-
+    '''
+    textを使いやすいようにする。
+    '''
     # re.sub や re.split を使い邪魔なものの削除
     normal_text = re.sub(' ', '　', normal_text)
     normal_text = re.sub('#', '　', normal_text)
