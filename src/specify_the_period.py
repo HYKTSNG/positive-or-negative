@@ -12,7 +12,6 @@ def clear_text_list_and_time_list(screen_name):
     '''
     全期間
     '''
-    print("screen_nameは、", screen_name, " ですね\n")
 
     f = open(screen_name + ".json", "r", encoding="utf-8")
 
@@ -72,15 +71,15 @@ def json_to_dict(screen_name):
 
     print("期間指定の開始日を入力してください。")
     print("例: 2021-08-21")
-    from_dt = dt(2021, 9, 19)
-    # temp_from_dt = str(input())
-    # from_dt = dt.strptime(temp_from_dt, '%Y-%m-%d')
+    # from_dt = dt(2021, 9, 19)
+    temp_from_dt = str(input())
+    from_dt = dt.strptime(temp_from_dt, '%Y-%m-%d')
 
     print("期間指定の終了日を入力してください。")
     print("例: 2021-12-5")
-    to_dt = dt(2021, 11, 9)
-    # temp_to_dt = str(input())
-    # to_dt = dt.strptime(temp_to_dt, '%Y-%m-%d')
+    # to_dt = dt(2021, 11, 9)
+    temp_to_dt = str(input())
+    to_dt = dt.strptime(temp_to_dt, '%Y-%m-%d')
 
     test_time_list = []
     test_text_list = []
@@ -95,7 +94,3 @@ def json_to_dict(screen_name):
             test_text_list.append(ummm)
 
     return test_text_list
-
-
-if __name__ == '__main__':
-    json_to_dict()
