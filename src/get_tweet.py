@@ -7,7 +7,6 @@ from datetime import datetime
 
 
 # --------------------------------------------------------------------
-# [8]:
 def get_tweets_proc(client, screen_name):
     nnx = 3000
     url_base = 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name='
@@ -16,9 +15,7 @@ def get_tweets_proc(client, screen_name):
     response, data = client.request(url)
     if response.status == 200:
         json_str = data.decode('utf-8')
-        #       print(json_str)
         array_aa = json.loads(json_str)
-        # sys.stderr.write("len(array_aa) = %d\n" % len(array_aa))
     else:
         sys.stderr.write("*** error *** get_ids_proc ***\n")
         sys.stderr.write("Error: %d\n" % response.status)
@@ -27,18 +24,10 @@ def get_tweets_proc(client, screen_name):
 
 def get_tweet():
     print("検索したい人のscreen_nameを@から入力してください")
-
-    # sample ↓
-    # screen_name = "@MpYcgEiS8peCbqq"
-    ''' 本番時は↓ '''
     screen_name = str(input())
-
     sys.stderr.write("*** 開始 ***\n")
-
     client = define_client_proc()
     array_aa = get_tweets_proc(client, screen_name)
-
-    # sys.stderr.write("len(array_aa) = %d\n" % len(array_aa))
     print("user_id : ", screen_name)
 
     # json出力

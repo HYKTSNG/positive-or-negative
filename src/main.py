@@ -4,7 +4,6 @@ import judge
 
 def main():
     '''実行ファイル'''
-
     get_tweet.get_tweet()
     judge.judge()
 

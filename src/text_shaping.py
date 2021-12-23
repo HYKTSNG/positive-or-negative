@@ -28,10 +28,7 @@ def format_text(normal_text):
     normal_text = re.sub("([ぁ-ん])\\1", "　", normal_text)
     # アルファベット削除
     normal_text = re.sub("([A-Za-z0-9ａ-ｚＡ-Ｚ０-９])", "　", normal_text)
-    # normal_text = re.sub("([_:])", "", normal_text)
-
     # 全角スペースの削除
     normal_text = re.sub("　", " ", normal_text)
 
-    # print(normal_text)
     return normal_text

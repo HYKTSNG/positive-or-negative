@@ -14,7 +14,6 @@ def clear_text_list_and_time_list(screen_name):
     '''
 
     f = open(screen_name + ".json", "r", encoding="utf-8")
-
     data = json.load(f)
     clear_text_list = []
     time_list = []
@@ -23,7 +22,6 @@ def clear_text_list_and_time_list(screen_name):
         clear_text = text_shaping.format_text(v)
         if clear_text != "":
             clear_text_list.append(clear_text)
-    # print(clear_text_list)
 
     for k in data.keys():
         temp_time = k.split()[0]
@@ -36,8 +34,6 @@ def fnc_screen_name():
 
     print("screen_nameを入力してください")
     screen_name = str(input())
-    # screen_name = "@MpYcgEiS8peCbqq"
-
     return screen_name
 
 
