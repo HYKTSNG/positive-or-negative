@@ -54,7 +54,7 @@ def json_to_dict(screen_name):
     print("\n以下が取得した期間です")
     print("\n-----------------------------")
     for tatd in time_and_text_dict:
-        print(tatd)
+        print(tatd, " ツイート数: ", len(time_and_text_dict[tatd]))
     print("\n-----------------------------")
 
     f = open(screen_name + ".json", "r", encoding="utf-8")
